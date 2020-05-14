@@ -4,13 +4,13 @@ RSpec.describe "articles/index", type: :view do
   before(:each) do
     assign(:articles, [
       Article.create!(
-        author: 2,
+        author_id: 2,
         title: "Title",
         text: "MyText",
         image: "Image"
       ),
       Article.create!(
-        author: 2,
+        author_id: 2,
         title: "Title",
         text: "MyText",
         image: "Image"

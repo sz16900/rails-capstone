@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "articles/edit", type: :view do
   before(:each) do
+    @seth = assign(:user, User.create(username: "szea", email: "szea@gmail.com", password: "123456789"))
     @article = assign(:article, Article.create!(
-      author: 1,
+      author_id: @seth.id,
       title: "MyString",
       text: "MyText",
       image: "MyString"
@@ -15,7 +16,7 @@ RSpec.describe "articles/edit", type: :view do
 
     assert_select "form[action=?][method=?]", article_path(@article), "post" do
 
-      assert_select "input[name=?]", "article[author]"
+      assert_select "input[name=?]", "article[author_id]"
 
       assert_select "input[name=?]", "article[title]"
 

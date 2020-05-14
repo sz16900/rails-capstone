@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe "articles/new", type: :view do
   before(:each) do
+    assign(:user, User.new(username: "szea", email: "szea@gmail.com", password: "123456789"))
+
     assign(:article, Article.new(
-      author: 1,
+      author_id: 1,
       title: "MyString",
       text: "MyText",
       image: "MyString"
