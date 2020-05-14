@@ -1,0 +1,2 @@
+class BridgeArticleCategory < ApplicationRecord
+end
