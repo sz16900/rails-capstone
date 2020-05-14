@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "articles/show", type: :view do
   before(:each) do
     @article = assign(:article, Article.create!(
-      authod: 2,
+      author: 2,
       title: "Title",
       text: "MyText",
       image: "Image"
