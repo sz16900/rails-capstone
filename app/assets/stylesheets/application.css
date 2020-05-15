@@ -14,6 +14,13 @@
  *= require_self
  */
 
+ body {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+ }
+
  a {
      text-decoration: none;
  }
@@ -29,7 +36,8 @@ nav {
     width: 30%;
 }
 
-.categories {
+.categories,
+.terms {
     display: flex;
     justify-content: space-between;
     width: 40%;
@@ -53,5 +61,46 @@ li {
     justify-content: flex-end;
 }
 
-.session-btns li{
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    height: 2.8rem;            /* Footer height */
+    background-color: #4e443f;
+}
+
+footer * {
+    align-self: center;
+    font-size: 1em;
+}
+
+.terms-items {
+    color: #b6551e;
+}
+
+.copyright {
+    color: white;
+}
+
+.social {
+    display: flex;
+}
+
+.social p {
+    color: white;
+    margin-right: 15px;
+}
+
+.social-icons {
+    font-size: 1.8em;
+}
+
+.fa {
+    color: #b6551e !important;
+    font-size: 18px;
 }

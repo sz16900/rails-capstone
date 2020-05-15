@@ -8,6 +8,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -42,6 +43,22 @@
     </div>
   </nav>
   <%= yield %>
+  <footer>
+    <div class="logo-footer<a>">saltylifestyle</div>
+    <ul class="terms">
+      <li class="terms-items">Privacy Policy</li>
+      <li class="terms-items">Terms & Conditions</li>
+      <li class="copyright">© 2020 Seth Zea. Made in the USA.</li>
+    </ul>
+    <div class="social">
+      <p>Connect with us:</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
