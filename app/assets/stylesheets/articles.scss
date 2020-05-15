@@ -1,3 +1,38 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.art-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 91vh;
+    grid-template-rows: 60% 40%;
+}
+
+.featured-article {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.weather {
+    grid-column-start: 4;
+    grid-column-end: span 5;
+}
+
+.fc1 {
+    background-color: red;
+}
+
+.fc2 {
+    background-color: yellow;
+}
+
+.fc3 {
+    background-color: yellowgreen;
+}
+
+.fc4 {
+    background-color: olivedrab;
+}
+
