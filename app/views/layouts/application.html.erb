@@ -24,6 +24,10 @@
     <div class="session-btns">
       <% if user_signed_in? %>
       <li>
+        <%= current_user.username %>
+      </li>
+      <span class="divider">|</span>
+      <li>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       </li>
       <% else %>
