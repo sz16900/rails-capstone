@@ -14,4 +14,44 @@
  *= require_self
  */
 
- @import "bulma";
+ a {
+     text-decoration: none;
+ }
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.logo {
+    width: 30%;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2em;
+    
+}
+
+.divider {
+    padding: 0 15px;
+}
+
+.session-btns {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.session-btns li{
+}
