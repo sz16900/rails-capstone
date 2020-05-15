@@ -23,17 +23,27 @@
 
  a {
      text-decoration: none;
+     
+ }
+
+ a:visited {
+     color: #b1afac;
  }
 
 nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 1.2em;
+    font-size: 1em;
+    height: 4em;
+    color: #b1afac;
+    align-items: center;
+    
 }
 
 .logo {
     width: 30%;
+    margin-left: 15px;
 }
 
 .categories,
@@ -45,10 +55,14 @@ nav {
     padding: 0;
 }
 
+.categories a {
+    color: #b1afac;
+}
+
+
 li {
     list-style: none;
     font-size: 1.2em;
-    
 }
 
 .divider {
@@ -59,6 +73,8 @@ li {
     width: 30%;
     display: flex;
     justify-content: flex-end;
+    margin-right: 15px;
+    color: #b1afac;
 }
 
 /* FOOTER */
@@ -77,6 +93,11 @@ footer {
 footer * {
     align-self: center;
     font-size: 1em;
+}
+
+.logo-footer {
+    margin-left: 15px;
+
 }
 
 .terms-items {
@@ -98,6 +119,7 @@ footer * {
 
 .social-icons {
     font-size: 1.8em;
+    margin-right: 15px;
 }
 
 .fa {
