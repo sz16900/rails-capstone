@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
         @user = User.create(username: 'seth', email: 'cool@q.com', password: '12345678')
         @article = Article.create(author_id: @user.id, title:"My first...", text:"This is my ...", image:"")
         @category = Category.create(name: "Surfing", priority: 1)
-        @bac = BridgeArticleCategory.create(article_id: @article.id, category_id: @category.id)
+        @bac = Tag.create(article_id: @article.id, category_id: @category.id)
          
     end
     context 'tests the category model creation' do
