@@ -4,7 +4,9 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    # @articles = Article.all #DONT FORGET TO REVERT THIS
+    @article = Article.first
+    @article2 = Article.last
   end
 
   # GET /articles/1
