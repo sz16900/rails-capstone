@@ -5,7 +5,13 @@ class Article < ApplicationRecord
     has_many :tags
     has_many :categories, :through => :tags
 
-    # def self.top_voted
-    #     Article.select(:vote)
-    # end
+    def self.top_voted
+        Article.find(
+            Article.joins(:votes)
+            .where("articles.id = votes.article_id")
+            .order("articles.id ASC")
+            .group("articles.id")
+            .count()
+            .first()[0])
+    end
 end
