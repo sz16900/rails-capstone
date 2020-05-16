@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
     before(:each) do
-        @user = User.create(username: 'seth', email: 'cool@q.com', password: '12345678')
+        @user = User.create(name: 'seth', email: 'cool@q.com', password: '12345678')
         @article = Article.create(author_id: @user.id, title:"My first...", text:"This is my ...", image:"")
         @category = Category.create(name: "Surfing", priority: 1)
         @bac = Tag.create(article_id: @article.id, category_id: @category.id)
