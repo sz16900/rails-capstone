@@ -5,6 +5,8 @@ class Article < ApplicationRecord
     has_many :tags
     has_many :categories, :through => :tags
 
+    validates :title, :text, :image, :author_id, presence: true
+
     def self.top_voted
         Article.find(
             Article.joins(:votes)
