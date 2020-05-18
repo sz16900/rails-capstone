@@ -83,7 +83,7 @@ footer {
     width: 100%;
     justify-content: space-between;
     font-size: 1em;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;

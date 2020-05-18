@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Categories</h1>
 
@@ -12,18 +12,27 @@
   </thead>
 
   <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.priority %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text.truncate(300) %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<br> -->
 
-<%= link_to 'New Category', new_category_path %>
+<div class="cat-container">
+  <% @articles.each do |article| %>
+  <div class="image-box" style="background-image: url(<%= image_path "#{article.image}"%>);background-position: center; background-size:
+    cover; background-repeat: no-repeat;">
+  </div>
+  <div class="text-box">
+    <h2 class="art-author"><span><%=article.author.name%></span></h2>
+    <h2 class="art-title"><%= article.title %></h2>
+    <p class="art-text"><%= article.text.truncate(200) %></p>
+    <a href="#">READ MORE</a>
+  </div>
+  <% end %>
+</div>
