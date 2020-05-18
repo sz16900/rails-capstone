@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
     has_many :votes
     has_many :tags
-    has_many :categories, :through => :tags
+    has_many :categories, through: :tags
 
     validates :title, :text, :image, :author_id, presence: true
 

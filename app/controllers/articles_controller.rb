@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   def index
     # @articles = Article.all #DONT FORGET TO REVERT THIS
     @featured_article = Article.top_voted
+    @categories = Category.top_priority
   end
 
   # GET /articles/1

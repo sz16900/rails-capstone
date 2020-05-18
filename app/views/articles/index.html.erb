@@ -1,11 +1,12 @@
 <div class="art-container">
-  <%= image_tag "#{@featured_article.image}", class: "featured-article", style: 'max-width: 100%;'%>
+  <div class="featured-article" style="background-image: url(<%= image_path "#{@featured_article.image}"%>);background-position: center;
+    background-size: cover; background-repeat: no-repeat;"></div>
   <div class="weather"></div>
 
-  <div class="featured-categories fc1">
-    <%# <%= image_tag "#{@article2.image}", class: "featured-article", style: 'max-width: 100%; max-height: 100%;'%> %>
+  <% @categories.each do |cat|%>
+  <div
+    style="background-image: url(<%= image_path "#{cat.articles.last.image}"%>);background-position: center; background-size: cover; background-repeat: no-repeat;">
   </div>
-  <div class="featured-categories fc2"></div>
-  <div class="featured-categories fc3"></div>
-  <div class="featured-categories fc4"></div>
+
+  <% end %>
 </div>
