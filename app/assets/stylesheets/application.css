@@ -23,11 +23,7 @@
 
  a {
      text-decoration: none;
-     
- }
-
- a:visited {
-     color: #b1afac;
+     color: #b1afac;     
  }
 
 nav {
@@ -38,19 +34,23 @@ nav {
     height: 4em;
     color: #b1afac;
     align-items: center;
-    
+    text-transform: uppercase;
+}
+
+.lstly {
+    padding-right: 15px;
 }
 
 .logo {
-    width: 30%;
+    width: 20%;
     margin-left: 15px;
 }
 
 .categories,
 .terms {
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    /* justify-content: space-between; */
+    width: 60%;
     margin: 0;
     padding: 0;
 }
@@ -62,15 +62,14 @@ nav {
 
 li {
     list-style: none;
-    font-size: 1.2em;
 }
 
 .divider {
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 .session-btns {
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: flex-end;
     margin-right: 15px;
@@ -84,7 +83,7 @@ footer {
     width: 100%;
     justify-content: space-between;
     font-size: 1em;
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;
@@ -125,4 +124,9 @@ footer * {
 .fa {
     color: #b6551e !important;
     font-size: 18px;
+}
+
+.terms {
+    justify-content: space-around;
+    width: 40%;
 }

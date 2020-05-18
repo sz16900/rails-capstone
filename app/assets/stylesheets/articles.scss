@@ -13,6 +13,19 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-title {
+    color: #fc5f00;
+    margin-top: auto;
+}
+
+.featured-text {
+    color: white;
 }
 
 .weather {
@@ -20,19 +33,27 @@
     grid-column-end: span 5;
 }
 
-.fc1 {
-    background-color: red;
+.featured-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
 }
 
-.fc2 {
-    background-color: yellow;
-}
 
-.fc3 {
-    background-color: yellowgreen;
-}
 
-.fc4 {
-    background-color: olivedrab;
+h3 span {
+    position: relative;
+    padding-bottom: 5px;
+    color: white;
 }
-
+h3 span::after{
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 1px; 
+    border-bottom: 4px solid #a2d791; 
+    content: ""
+}

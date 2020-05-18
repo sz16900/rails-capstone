@@ -1,11 +1,18 @@
 <div class="art-container">
   <div class="featured-article" style="background-image: url(<%= image_path "#{@featured_article.image}"%>);background-position: center;
-    background-size: cover; background-repeat: no-repeat;"></div>
+    background-size: cover; background-repeat: no-repeat;">
+    <h4 class="featured-title"><%= @featured_article.title%></h4>
+    <p class="featured-text"><%= @featured_article.text.truncate(200)%></p>
+  </div>
   <div class="weather"></div>
 
   <% @categories.each do |cat|%>
-  <div
+  <div class="featured-category"
     style="background-image: url(<%= image_path "#{cat.articles.last.image}"%>);background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <a class="cat-title" href="<%= categories_path%>">
+      <h3><span><%= cat.name.upcase%></span></h3>
+    </a>
+    <p><b><%= cat.articles.last.title%></b></p>
   </div>
 
   <% end %>
