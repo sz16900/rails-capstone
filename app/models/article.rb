@@ -7,13 +7,13 @@ class Article < ApplicationRecord
 
     validates :title, :text, :image, :author_id, presence: true
 
+    # I am avoiding an n+1 problem here by querying once inside the database
     def self.top_voted
-        Article.find(
-            Article.joins(:votes)
+            votes = Article.joins(:votes)
             .where("articles.id = votes.article_id")
-            .order("articles.id ASC")
             .group("articles.id")
             .count()
-            .first()[0])
+            # This can be re-factored to take place all in the database, for now i dunno how and theres no time
+            Article.find(votes.max_by{|k,v| v}[0])
     end
 end
