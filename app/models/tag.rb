@@ -3,7 +3,7 @@ class Tag < ApplicationRecord
     belongs_to :category
 
     validate :tag_valid?
-  
+    
     private
     
     def tag_valid?

@@ -33,6 +33,7 @@
     <h2 class="art-title"><%= article.title %></h2>
     <p class="art-text"><%= article.text.truncate(200) %></p>
     <a href="#">READ MORE</a>
+    <%= link_to('Vote', article_votes_path(article_id: article.id), method: :post) %>
   </div>
   <% end %>
 </div>

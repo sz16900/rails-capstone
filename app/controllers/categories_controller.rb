@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /categories
   # GET /categories.json
   def index
-
+    #  Move this to show
     @articles = Category.find(params[:id]).articles.order(id: :desc)
   end
 

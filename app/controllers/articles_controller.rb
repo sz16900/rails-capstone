@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
+
 
   # GET /articles
   # GET /articles.json
@@ -28,9 +30,9 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(image: article_params[:image], text: article_params[:text], title: article_params[:title], author_id: current_user.id)
-
+    
     respond_to do |format|
-      if @article.save
+      if @article.save 
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
