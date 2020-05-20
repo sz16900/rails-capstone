@@ -30,9 +30,8 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(image: article_params[:image], text: article_params[:text], title: article_params[:title], author_id: current_user.id)
-    
     respond_to do |format|
-      if @article.save 
+      if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
@@ -74,6 +73,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:author, :title, :text, :image)
+      params.require(:article).permit(:id, :author, :title, :text, :image)
     end
 end

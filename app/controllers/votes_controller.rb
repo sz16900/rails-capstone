@@ -9,7 +9,7 @@ class VotesController < ApplicationController
             else
                 @article.votes.create(user_id: current_user.id)
             end
-                redirect_to root_path(@article)
+                redirect_to category_path(:id => @article.categories[0].id)
     end  
 
     private  

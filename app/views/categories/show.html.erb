@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="cat-container">
+  <% @articles.each do |article| %>
+  <div class="image-box" style="background-image: url(<%= image_path "#{article.image}"%>);background-position: center; background-size:
+    cover; background-repeat: no-repeat;">
+  </div>
+  <div class="text-box">
+    <h2 class="art-author"><span><%=article.author.name%></span></h2>
+    <h2 class="art-title"><%= article.title %></h2>
+    <p class="art-text"><%= article.text.truncate(200) %></p>
+    <%= link_to('VOTE', article_votes_path(article_id: article.id), method: :post) %>
+  </div>
+  <% end %>
+</div>

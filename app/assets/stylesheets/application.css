@@ -49,7 +49,7 @@ nav {
 .categories,
 .terms {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
     width: 60%;
     margin: 0;
     padding: 0;

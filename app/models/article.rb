@@ -3,11 +3,7 @@ class Article < ApplicationRecord
     
     has_many :votes
     has_many :tags
-    has_many :categories, through: :tags
-    
-    accepts_nested_attributes_for :tags
-    
-    
+    has_many :categories, through: :tags      
 
     # I am avoiding an n+1 problem here by querying once inside the database
     def self.top_voted
