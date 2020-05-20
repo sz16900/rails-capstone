@@ -14,14 +14,16 @@
  *= require_self
  */
 
- html, body { 
+ /* html, body { 
      height:100%; 
-     margin:0; 
-    }
-
- body { 
-    display:flex; 
-    flex-direction:column; 
+    } */
+    
+    body { 
+        /* display:flex; 
+        flex-direction:column;  */
+        min-height: 100vh;
+        margin:0; 
+        position: relative;
   }
   
 
@@ -103,6 +105,7 @@ footer {
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;
     margin-top: auto;
+    position: absolute;
 }
 
 footer * {
@@ -156,6 +159,10 @@ footer * {
 .terms {
     justify-content: space-around;
     width: 40%;
+}
+
+.new-article-container {
+    padding-bottom: 2.8em;
 }
 
 .new-article-container,

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
-  validates :name, uniqueness: true, if: -> { self.name.present? }
+  validates :name, uniqueness: true, if: -> { name.present? }
 
   has_many :articles
   has_many :votes
