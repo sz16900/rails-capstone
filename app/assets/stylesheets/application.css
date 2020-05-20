@@ -34,16 +34,26 @@ nav {
     height: 4em;
     color: #b1afac;
     align-items: center;
-    text-transform: uppercase;
 }
 
 .lstly {
     padding-right: 15px;
+    text-transform: uppercase;
 }
 
 .logo {
     width: 20%;
     margin-left: 15px;
+    font-size: 1.5em;
+    color: #4d433e;
+}
+
+.logo .period {
+    height: 15px;
+    width: 15px;
+    background-color: #f86208;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .categories,
@@ -74,6 +84,8 @@ li {
     justify-content: flex-end;
     margin-right: 15px;
     color: #b1afac;
+    text-transform: uppercase;
+
 }
 
 /* FOOTER */
@@ -96,7 +108,18 @@ footer * {
 
 .logo-footer {
     margin-left: 15px;
+    width: 20%;
+    margin-left: 15px;
+    font-size: 1.5em;
+    color: white;
+}
 
+.logo-footer .period {
+    height: 15px;
+    width: 15px;
+    background-color: #f86208;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .terms-items {
@@ -129,4 +152,41 @@ footer * {
 .terms {
     justify-content: space-around;
     width: 40%;
+}
+
+.new-article-container,
+.new-article-title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.new-article-title {
+    font-size: 3.5em;
+}
+
+.new-article-title .period {
+    height: 15px;
+    width: 15px;
+    background-color: #f86208;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.f-label {
+    font-size: 2.5em;
+    margin: 10px;
+    font-weight: 900;
+}
+
+.f-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #f86208;
+    color: white;
+    border: none;
 }

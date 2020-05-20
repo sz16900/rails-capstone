@@ -1,16 +1,18 @@
-<%= simple_form_for(@article) do |f| %>
-<%= f.error_notification %>
-<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="new-article-container">
+  <%= simple_form_for(@article) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<div class="form-inputs">
-  <%# <%= f.input :author_id %>
-  <%= f.input :title %>
-  <%= f.input :text %>
-  <%= f.input :image %>
+  <div class="form-inputs">
+    <%# <%= f.input :author_id %>
+    <%= f.input :title, input_html: { class: "f-input" }, label_html: { class: "f-label" } %>
+    <%= f.input :text, label_html: { class: "f-label" }, input_html: { class: "f-input" } %>
+    <%= f.input :image, label_html: { class: "f-label" }, input_html: { class: "f-input" } %>
+  </div>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, submit_html: { class: "f-button" } %>
+  </div>
+  <% end %>
 </div>
-
-
-<div class="form-actions">
-  <%= f.button :submit %>
-</div>
-<% end %>
