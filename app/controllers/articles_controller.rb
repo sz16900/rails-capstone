@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    # @articles = Article.all #DONT FORGET TO REVERT THIS
+    @categories = Category.all
     @featured_article = Article.top_voted
     @categories = Category.top_priority
 
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
         # Make sure the Tag is created via the nested forms :)
         cat = Category.find_by_name(article_params[:tags_attributes]["0"][:category_name])
         Tag.create(article_id: @article.id, category_id: cat.id, category_name: cat.name)
-        
+
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else

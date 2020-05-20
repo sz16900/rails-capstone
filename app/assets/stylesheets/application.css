@@ -14,12 +14,16 @@
  *= require_self
  */
 
- body {
-    position: relative;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
- }
+ html, body { 
+     height:100%; 
+     margin:0; 
+    }
+
+ body { 
+    display:flex; 
+    flex-direction:column; 
+  }
+  
 
  a {
      text-decoration: none;
@@ -95,10 +99,10 @@ footer {
     width: 100%;
     justify-content: space-between;
     font-size: 1em;
-    position: absolute;
     bottom: 0;
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;
+    margin-top: auto;
 }
 
 footer * {
@@ -173,15 +177,21 @@ footer * {
     display: inline-block;
 }
 
-.f-label {
+.f-label,
+.article_image label {
     font-size: 2.5em;
     margin: 10px;
     font-weight: 900;
 }
 
-.f-input {
+.f-input,
+.article_image select {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.article-position {
+    display: flex;
 }
 
 .btn {
@@ -189,4 +199,5 @@ footer * {
     background-color: #f86208;
     color: white;
     border: none;
+    margin-bottom: 20px;
 }

@@ -4,6 +4,8 @@ class Tag < ApplicationRecord
 
     validate :tag_valid?
 
+    validates :category_name, presence: true
+
     accepts_nested_attributes_for :article
 
     

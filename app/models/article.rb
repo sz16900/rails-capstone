@@ -14,7 +14,6 @@ class Article < ApplicationRecord
             .where("articles.id = votes.article_id")
             .group("articles.id")
             .count()
-            # This can be re-factored to take place all in the database, for now i dunno how and theres no time
             Article.find(votes.max_by{|k,v| v}[0])
     end
 end
