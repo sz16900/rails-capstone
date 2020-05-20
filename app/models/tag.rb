@@ -3,6 +3,9 @@ class Tag < ApplicationRecord
     belongs_to :category
 
     validate :tag_valid?
+
+    accepts_nested_attributes_for :article
+
     
     private
     

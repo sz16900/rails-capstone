@@ -8,6 +8,9 @@
     <%= f.input :title, input_html: { class: "f-input" }, label_html: { class: "f-label" } %>
     <%= f.input :text, label_html: { class: "f-label" }, input_html: { class: "f-input" } %>
     <%= f.input :image, label_html: { class: "f-label" }, input_html: { class: "f-input" } %>
+    <%= f.simple_fields_for(:tags) do |entity_form| %>
+      <%= entity_form.input :category_name %>
+    <% end %>
 
   </div>
 

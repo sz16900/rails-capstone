@@ -4,6 +4,7 @@ class Category < ApplicationRecord
 
     validates :name, uniqueness: true, presence: true
 
+
     def self.top_priority
         # And this is how you avoid n+1 problems
         Category.order("priority ASC").limit(4).includes(:articles)
