@@ -1,4 +1,3 @@
-<!-- I LEAVE THE COMMENT CODE HERE TO LATER MANIPULATE TO GET THE DESIGN RIGHT -->
 <div class="cat-container">
   <% @articles.each_with_index do |article, indx| %>
   <div class="image-box" style="background-image: url(<%= image_path "#{article.image}"%>);background-position: center; background-size:
@@ -11,19 +10,5 @@
     <p class="art-text"><%= article.text.truncate(100) %></p>
     <p class="vote"><%= link_to('VOTE', article_votes_path(article_id: article.id), method: :post) %></p>
   </div>
-
-  <!-- <% if indx % 2 != 0 %>
-
-  <div class="text-box2">
-    <h2 class="art-author"><span><%=article.author.name%></span></h2>
-    <h2 class="art-title"><%= article.title %></h2>
-    <p class="art-text"><%= article.text.truncate(100) %></p>
-    <p class="vote"><%= link_to('VOTE', article_votes_path(article_id: article.id), method: :post) %></p>
-  </div>
-  <div class="image-box2" style="background-image: url(<%= image_path "#{article.image}"%>);background-position: center; background-size:
-    cover; background-repeat: no-repeat;">
-  </div>
-  <% end %> -->
-
   <% end %>
 </div>
