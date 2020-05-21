@@ -1,11 +1,7 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.cat-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-bottom: 45px;
-}
+
 
 .cat-container div {
     height: 41vh;
@@ -60,4 +56,8 @@ h2 span::after{
 
 .vote {
     margin: 0;
+}
+
+@media screen and (max-width: 855px) {
+
 }
