@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateBridgeArticleCategories < ActiveRecord::Migration[5.2]
   def change
     create_table :bridge_article_categories do |t|
