@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-bottom: 45px;
-    grid-auto-flow: dense;
 }
 
 .cat-container div {
@@ -18,7 +17,7 @@
     padding-right: 15px;
     padding-bottom: 0;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 // I LEAVE THIS HERE TO LATER PLAY WITH IT I WANT TO STYLE IT

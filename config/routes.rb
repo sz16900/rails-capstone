@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   resources :categories
+  resources :votes, only: [:create, :destroy]
   resources :articles do
     resources :votes
   end
