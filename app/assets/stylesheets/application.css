@@ -228,11 +228,18 @@ abbr[title] {
   }
 
   @media screen and (max-width: 855px) {
+    nav {
+        position: fixed;
+        font-size: 0.8em;
+        background-color: white;
+        z-index: 9999;
+    }
     .categories {
         display: none;
     }
     .logo {
-        width:80%
+        width:80%;
+        font-size: 1.1em;
     }
     .session-btns * {
         font-size: 1.1em;
@@ -240,6 +247,9 @@ abbr[title] {
     .featured-category {
         grid-column-start: 1;
         grid-column-end: -1;
+    }
+    .featured-text {
+        font-size: 1em;
     }
     .art-container {
         grid-template-rows: 60% 40% 40% 40% 40%;
