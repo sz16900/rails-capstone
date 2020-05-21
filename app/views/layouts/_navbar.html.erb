@@ -1,0 +1,30 @@
+<nav>
+    <div class="logo">SalTLyLIfeStlYLe<span class = "period"></span></div>
+    <ul class="categories">
+        <a href=<%= root_path%>>
+            <li class="lstly">Home</li>
+        </a>
+        <a href=<%= new_article_path%>>
+            <li class="lstly">Write an Article</li>
+        </a>
+    </ul>
+    <div class="session-btns">
+        <% if user_signed_in? %>
+        <li>
+            <%= current_user.name %>
+        </li>
+        <span class="divider">|</span>
+        <li>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </li>
+        <% else %>
+        <li>
+            <%= link_to('Register', new_user_registration_path) %>
+        </li>
+        <span class="divider">|</span>
+        <li>
+            <%= link_to('Login', new_user_session_path) %>
+        </li>
+        <% end %>
+    </div>
+</nav>

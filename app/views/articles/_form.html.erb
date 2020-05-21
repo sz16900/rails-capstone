@@ -1,0 +1,23 @@
+<div class="new-article-container article-postion">
+  <%= simple_form_for(@article) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :title, input_html: { class: "f-input" }, label_html: { class: "f-label" } %>
+    <%= f.input :text, label_html: { class: "f-label" }, input_html: { class: "f-input" } %>
+    <%=f.input :image, :as => :select do %>
+  <%= f.select :image, [['kiteboarder', 'kiteboarder'], ['longboarder', 'longboarder'], ['surfer', 'surfer'], ['freediver', 'freediver'], ['scuba', 'scuba'] ] %>
+<%end%>
+    <%= f.simple_fields_for(:tags) do |entity_form| %>
+      <%= entity_form.input :category_name, collection: Category.all, value_method: :name, label_html: { class: "f-label" }, input_html: { class: "f-input" }, include_blank: false %>
+    <% end %>
+
+  </div>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, submit_html: { class: "f-button" } %>
+  </div>
+  <% end %>
+</div>

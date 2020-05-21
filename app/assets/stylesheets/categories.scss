@@ -1,0 +1,65 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.cat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 45px;
+    grid-auto-flow: dense;
+}
+
+.cat-container div {
+    height: 41vh;
+}
+
+.text-box {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// I LEAVE THIS HERE TO LATER PLAY WITH IT I WANT TO STYLE IT
+
+.text-box2 {
+grid-row-start: 3;
+}
+
+.image-box2 {
+    grid-row-start: 3;
+}
+
+
+.text-box h2 {
+    margin: 0;
+}
+
+.art-author {
+    font-size: 1.3em;
+
+}
+
+.art-title {
+    font-size: 1.5em;
+}
+
+h2 span {
+    position: relative;
+    padding-bottom: 5px;
+    color: #fab247;
+}
+h2 span::after{
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 1px; 
+    border-bottom: 4px solid #fab247; 
+    content: ""
+}
+
+.vote {
+    margin: 0;
+}

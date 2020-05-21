@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Saltylifestyle</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>saltylifestyle</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <%= render "layouts/navbar" %>
+  
+  <% if notice.present? %>
+  <div class="notice">
+    <p> <%= notice %> </p>
+  </div>
+  <% end %>
+  <% if alert.present? %>
+  <div class="alert">
+    <p> <%= alert %> </p>
+  </div>
+  <% end %>
+
+  <%= yield %>
+
+  <%= render "layouts/footer" %>
+</body>
+
 </html>
