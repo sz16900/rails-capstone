@@ -103,7 +103,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Microverse](https://microverse.org)
-- [Axel Arigato](https://www.behance.net/gallery/80392909/AXEL-ARIGATO-Website) for his amazing design 
+- [Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) for his amazing design 
 
 ---
 
