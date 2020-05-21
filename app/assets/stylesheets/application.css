@@ -19,15 +19,11 @@ html, body {
     height: 100%;
 }
 
-.main-container {
-    height: 100%;
-}
-
 .art-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 60% 40%;
-    height: 100%;
+    height: 85vh;
 }
          
  a {
@@ -107,7 +103,7 @@ footer {
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;
     margin-top: auto;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
