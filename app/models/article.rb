@@ -9,7 +9,6 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :tags
 
-
   # I am avoiding an n+1 problem here by querying once inside the database
   def self.top_voted
     votes = Article.joins(:votes)
@@ -17,6 +16,6 @@ class Article < ApplicationRecord
       .group('articles.id')
       .count
       result = votes.max_by { |_k, v| v }[0]
-    Article.find(result)
+      Article.find(result)
   end
 end
