@@ -8,10 +8,12 @@
   <% @categories.each do |cat|%>
   <div class="featured-category"
     style="background-image: url(<%= image_path "#{cat.articles.last.image}"%>);background-position: center; background-size: cover; background-repeat: no-repeat;">
-    
-    <h3><span class = "a-cat-tile"><%= link_to "#{cat.name.upcase}", category_path(:id => cat.id) %></span></h3>
+
+    <h3><span class="a-cat-tile"><%= link_to "#{cat.name.upcase}", category_path(:id => cat.id) %></span></h3>
     <p><b><%= cat.articles.last.title%></b></p>
   </div>
-
   <% end %>
+  <a href=<%= new_article_path%> class="write-article">
+    <h1>WRITE ARTICLE</h1>
+  </a>
 </div>

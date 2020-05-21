@@ -11,13 +11,6 @@ a:hover * {
     color: #fc5f00;
 }
 
-.art-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 85vh;
-    grid-template-rows: 60% 40%;
-}
-
 .featured-article {
     grid-column-start: 1;
     grid-column-end: 5;

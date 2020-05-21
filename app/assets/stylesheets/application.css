@@ -14,18 +14,22 @@
  *= require_self
  */
 
- /* html, body { 
-     height:100%; 
-    } */
-    
-    body { 
-        /* display:flex; 
-        flex-direction:column;  */
-        min-height: 100vh;
-        margin:0; 
-        position: relative;
-  }
-  
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.art-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60% 40%;
+    height: 100%;
+}
+         
  a {
      text-decoration: none;
      color: #b1afac;     
@@ -36,7 +40,7 @@ nav {
     width: 100%;
     justify-content: space-between;
     font-size: 1em;
-    height: 4em;
+    height: 3.5em;
     color: #b1afac;
     align-items: center;
 }
@@ -47,7 +51,7 @@ nav {
 }
 
 .logo {
-    width: 20%;
+    width: 30%;
     margin-left: 15px;
     font-size: 1.5em;
     color: #4d433e;
@@ -65,7 +69,7 @@ nav {
 .terms {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 40%;
     margin: 0;
     padding: 0;
 }
@@ -84,7 +88,7 @@ li {
 }
 
 .session-btns {
-    width: 20%;
+    width: 30%;
     display: flex;
     justify-content: flex-end;
     margin-right: 15px;
@@ -100,11 +104,15 @@ footer {
     width: 100%;
     justify-content: space-between;
     font-size: 1em;
-    bottom: 0;
     height: 2.8rem;            /* Footer height */
     background-color: #4e443f;
     margin-top: auto;
     position: absolute;
+    bottom: 0;
+}
+
+.write-article {
+    display: none;
 }
 
 footer * {
@@ -114,7 +122,7 @@ footer * {
 
 .logo-footer {
     margin-left: 15px;
-    width: 20%;
+    width: 25%;
     margin-left: 15px;
     font-size: 1.5em;
     color: white;
@@ -207,3 +215,42 @@ footer * {
     border: none;
     margin-bottom: 20px;
 }
+
+/* CLEAN UP */
+
+abbr[title] {
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+    display: none;
+  }
+
+  @media screen and (max-width: 855px) {
+    .categories {
+        display: none;
+    }
+    .logo {
+        width:80%
+    }
+    .session-btns * {
+        font-size: 1.1em;
+    }
+    .featured-category {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .art-container {
+        grid-template-rows: 60% 40% 40% 40% 40%;
+    }
+    .write-article {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: -1;
+
+    }
+    footer {
+        display: none;
+    }
+  }

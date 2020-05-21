@@ -18,7 +18,7 @@ class VotesController < ApplicationController
     else
       redirect_to category_path, alert: 'You cannot disvote article that you did not vote before.'
     end
-  endvote
+  end
 
   private
 
