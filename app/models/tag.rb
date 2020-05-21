@@ -15,4 +15,5 @@ class Tag < ApplicationRecord
       return errors.add(:category_id, "cannot have duplicate id's")
     end
   end
+  true
 end

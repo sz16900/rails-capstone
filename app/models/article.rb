@@ -15,7 +15,7 @@ class Article < ApplicationRecord
       .where('articles.id = votes.article_id')
       .group('articles.id')
       .count
-      result = votes.max_by { |_k, v| v }[0]
-      Article.find(result)
+    result = votes.max_by { |_k, v| v }[0]
+    Article.find(result)
   end
 end
