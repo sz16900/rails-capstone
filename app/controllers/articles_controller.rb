@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
         cat = Category.find_by_name(article_params[:tags_attributes]['0'][:category_name])
         Tag.create(article_id: @article.id, category_id: cat.id, category_name: cat.name)
 
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }

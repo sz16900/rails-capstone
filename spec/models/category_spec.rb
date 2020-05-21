@@ -17,4 +17,14 @@ RSpec.describe User, type: :model do
       expect(@category2.valid?).to eq(false)
     end
   end
+  context 'tests the category priority' do
+    it 'checks the top priorities' do
+      Category.create(name: 'surfing', priority: 2)
+      Category.create(name: 'freediving', priority: 3)
+      Category.create(name: 'scubadiving', priority: 4)
+      Category.create(name: 'kiteboarding', priority: 5)
+      results = Category.top_priority
+      expect(results[0].name).to eq('Surfing')
+    end
+  end
 end
