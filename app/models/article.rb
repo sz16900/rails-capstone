@@ -18,5 +18,4 @@ class Article < ApplicationRecord
     result = votes.max_by { |_k, v| v }[0]
     Article.find(result)
   end
-  
 end
