@@ -36,7 +36,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/sz16900/sneakers-shop-capstone/final-details/index.html)
+[Live Demo Link](https://ancient-harbor-95211.herokuapp.com/)
 
 ---
 
