@@ -11,7 +11,8 @@ class Article < ApplicationRecord
 
   # I am avoiding an n+1 problem here by querying once inside the database
   def self.top_voted
-    votes = Article.joins(:votes)
+    votes = Article
+      .joins(:votes)
       .where('articles.id = votes.article_id')
       .group('articles.id')
       .count
