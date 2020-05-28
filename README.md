@@ -52,17 +52,16 @@
 
 ### Dependencies
 
-- Stylelint
+- Rubocop
+- Rspec
 
-### Run Linter Test
+### Run Rspec Test
 
-`stylelint "*/*.css"`
+`rspec`
 
-> https://stylelint.io/user-guide/cli
+### Autofix Rubocop Linting Errors
 
-### Autofix CSS Linting Errors
-
-`stylelint "*/**.css" --fix`
+`rubocop -a`
 
 ### Getting Started
 
