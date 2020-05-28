@@ -107,6 +107,13 @@ Give a ⭐️ if you like this project!
 
 ---
 
+## Future Features
+
+- A better mobile friendly experience 
+- Cleaner log in / sign up pages
+- A feature where the site's admin can review articles before publication
+
+
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
