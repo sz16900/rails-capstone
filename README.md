@@ -113,6 +113,7 @@ Give a ⭐️ if you like this project!
 - Cleaner log in / sign up pages
 - A feature where the site's admin can review articles before publication
 
+---
 
 ## 📝 License
 
