@@ -1,4 +1,4 @@
-# [RAILS Capstone Project: Salty Lifestyle Magazine]
+# [Ruby on Rails Capstone Project: Salty Lifestyle Magazine]
 
 > In this project, I am going to make a real-world-like project, built with business specifications from [Notion](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561). This is a capstone project for [Microverse](https://www.microverse.org/) in order to demonstrate knowledge of vanilla HTML/CSS, Ruby and Ruby on Rails by creating a website from scratch without the aid of external frameworks. This project is completed by Seth Zea, in partial requirements of the Microverse cirriculum. 
 
